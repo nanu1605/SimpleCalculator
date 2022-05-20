@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: Home()
+    home: Home(),
   ));
 }
 class Home extends StatefulWidget {
@@ -24,7 +24,6 @@ class _HomeState extends State<Home> {
   late String history='';
 
   void buttonclick(String buttonvalue){
-    // print(buttonvalue);
     if(buttonvalue=='AC'){
       firstnum=0;
       secondnum=0;
@@ -78,314 +77,316 @@ class _HomeState extends State<Home> {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.red[700],
+          backgroundColor: Colors.red[900],
         ),
-        body:Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget> [
-            Container(
-              padding: EdgeInsets.only(right: 35),
-              alignment: Alignment(1.0,1.0),
-              child: Text(
-                history,
-                style: TextStyle(
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(30),
-              alignment: Alignment(1.0,1.0),
-              child: Text(
-                texttodisplay,
-                style: TextStyle(
-                  fontSize: 48,
-                ),
-              ),
-            ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        body: Container(
+          decoration: new BoxDecoration(color: Colors.black),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget> [
-            Row(
+              Container(
+                padding: EdgeInsets.only(right: 35),
+                alignment: Alignment(1.0,1.0),
+                child: Text(
+                  history,
+                  style: TextStyle(
+                    fontSize: 24,color: Colors.white
+                  ),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(25),
+                alignment: Alignment(1.0,1.0),
+                child: Text(
+                  texttodisplay,
+                  style: TextStyle(
+                    fontSize: 48,
+                    color: Colors.white
+                  ),
+                ),
+              ),
+            Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget> [
-                Container(
-                  margin: EdgeInsets.fromLTRB(5,10,5,10),
-                  child: SizedBox(
-                    width: 90,
-                    height: 40,
-                    child: ElevatedButton(onPressed: (){buttonclick('7');},
-                      style: ElevatedButton.styleFrom(
-                      primary: Colors.amber
-                      ),
-                      child: Text('7',
-                      style: TextStyle(fontFamily: 'Raleway',
-                      fontSize: 30,
-                      )
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(5,10,5,10),
-                  child: SizedBox(
-                    width: 90,
-                    height: 40,
-                    child: ElevatedButton(onPressed: (){buttonclick('8'); },
-                      child: Text('8',
-                      style: TextStyle(fontFamily: 'Raleway',
-                      fontSize: 30
-                      )
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(5,10,5,10),
-                  child: SizedBox(
-                    width: 90,
-                    height: 40,
-                    child: ElevatedButton(onPressed: (){buttonclick('9'); },
-                      child: Text('9',
-                          style: TextStyle(fontFamily: 'Raleway',
-                              fontSize: 30
-                          )
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(5,10,5,10),
-                  child: SizedBox(
-                    width: 90,
-                    height: 40,
-                    child: ElevatedButton(onPressed: (){buttonclick('*'); },
-                      child: Text('*',
-                          style: TextStyle(fontFamily: 'Raleway',
-                              fontSize: 30
-                          )
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget> [
                   Container(
                     margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
-                      child: ElevatedButton(onPressed: (){buttonclick('4');},
+                    child: ElevatedButton(onPressed: (){buttonclick('7');},
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.amber
+                            shape: CircleBorder(),
+                            padding: EdgeInsets.all(25),
+                            primary: Colors.blue
                         ),
-                        child: Text('4',
-                            style: TextStyle(fontFamily: 'Raleway',
-                              fontSize: 30,
-                            )
+                        child: Text('7',
+                        style: TextStyle(fontFamily: 'Raleway',
+                        fontSize: 30,
+                        )
                         ),
                       ),
                     ),
-                  ),
                   Container(
                     margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
-                      child: ElevatedButton(onPressed: (){buttonclick('5'); },
-                        child: Text('5',
+                    child: ElevatedButton(onPressed: (){buttonclick('8');},
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(25),
+                      ),
+                        child: Text('8',
+                        style: TextStyle(fontFamily: 'Raleway',
+                        fontSize: 30
+                        )
+                        ),
+                      ),
+                    ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(5,10,5,10),
+                    child: ElevatedButton(onPressed: (){buttonclick('9'); },
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(25),
+                      ),
+                        child: Text('9',
                             style: TextStyle(fontFamily: 'Raleway',
                                 fontSize: 30
                             )
                         ),
                       ),
                     ),
-                  ),
                   Container(
                     margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
-                      child: ElevatedButton(onPressed: (){buttonclick('6'); },
-                        child: Text('6',
+                    child: ElevatedButton(onPressed: (){buttonclick('*'); },
+                      style: ElevatedButton.styleFrom(
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(25),
+                        primary: Colors.amber
+                      ),
+                        child: Text('*',
                             style: TextStyle(fontFamily: 'Raleway',
                                 fontSize: 30
                             )
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
-                      child: ElevatedButton(onPressed: (){buttonclick('+'); },
-                        child: Text('+',
-                            style: TextStyle(fontFamily: 'Raleway',
-                                fontSize: 30
-                            )
-                        ),
-                      ),
-                    ),
-                  ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget> [
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget> [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
+                      child: ElevatedButton(onPressed: (){buttonclick('4');},
+                          style: ElevatedButton.styleFrom(
+                              shape: CircleBorder(),
+                              padding: EdgeInsets.all(25),
+                              primary: Colors.blue
+                          ),
+                          child: Text('4',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                fontSize: 30,
+                              )
+                          ),
+                        ),
+                      ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
+                      child: ElevatedButton(onPressed: (){buttonclick('5'); },
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                        ),
+                          child: Text('5',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
+                        ),
+                      ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
+                      child: ElevatedButton(onPressed: (){buttonclick('6'); },
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                        ),
+                          child: Text('6',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
+                        ),
+                      ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
+                      child: ElevatedButton(onPressed: (){buttonclick('+'); },
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                            primary: Colors.amber
+                        ),
+                          child: Text('+',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget> [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('1');},
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.amber
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
                         ),
-                        child: Text('1',
-                            style: TextStyle(fontFamily: 'Raleway',
-                              fontSize: 30,
-                            )
+                          child: Text('1',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                fontSize: 30,
+                              )
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('2'); },
-                        child: Text('2',
-                            style: TextStyle(fontFamily: 'Raleway',
-                                fontSize: 30
-                            )
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                        ),
+                          child: Text('2',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('3'); },
-                        child: Text('3',
-                            style: TextStyle(fontFamily: 'Raleway',
-                                fontSize: 30
-                            )
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                        ),
+                          child: Text('3',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('-'); },
-                        child: Text('-',
-                            style: TextStyle(fontFamily: 'Raleway',
-                                fontSize: 30
-                            )
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                          primary: Colors.amber
                         ),
+                          child: Text('-',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget> [
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget> [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
+                      height: 90,
                       child: ElevatedButton(onPressed: (){buttonclick('AC');},
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.amber
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(15),
+                          primary: Colors.orange[800]
                         ),
-                        child: Text('AC',
-                            style: TextStyle(fontFamily: 'Raleway',
-                              fontSize: 30,
-                            )
+                          child: Text('AC',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                fontSize: 30,
+                              )
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('0'); },
-                        child: Text('0',
-                            style: TextStyle(fontFamily: 'Raleway',
-                                fontSize: 30
-                            )
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                        ),
+                          child: Text('0',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('='); },
-                        child: Text('=',
-                            style: TextStyle(fontFamily: 'Raleway',
-                                fontSize: 30
-                            )
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                          primary: Colors.green
+                        ),
+                          child: Text('=',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('/'); },
-                        child: Text('/',
-                            style: TextStyle(fontFamily: 'Raleway',
-                                fontSize: 30
-                            )
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                          primary: Colors.amber
+                        ),
+                          child: Text('/',
+                              style: TextStyle(fontFamily: 'Raleway',
+                                  fontSize: 30
+                              )
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: SizedBox(
-                      width: 90,
-                      height: 40,
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(5,10,5,10),
                       child: ElevatedButton(onPressed: (){buttonclick('back'); },
-                        child: Icon(
-                          Icons.backspace_outlined
+                        style: ElevatedButton.styleFrom(
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(25),
+                          primary: Colors.red[700]
                         ),
-                      ),
+                          child: Icon(
+                            Icons.backspace_outlined
+                          ),
+                        ),
                     ),
-                  ),
-                    ],
-                    )
-                    ],
-                    ),
-          ],
+                  ],
+                )
+              ],
+            ),
+            ],
+          ),
         ),
     );
   }
