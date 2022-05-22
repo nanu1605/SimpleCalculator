@@ -38,6 +38,7 @@ class _HomeState extends State<Home> {
       firstnum=int.parse(texttodisplay);
       res='';
       operation=buttonvalue;
+      // res=firstnum.toString()+operation.toString();
     }
     else if(buttonvalue=='='){
       secondnum=int.parse(texttodisplay);
@@ -80,7 +81,6 @@ class _HomeState extends State<Home> {
           backgroundColor: Colors.red[900],
         ),
         body: Container(
-          //hello
           decoration: new BoxDecoration(color: Colors.black),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -158,13 +158,13 @@ class _HomeState extends State<Home> {
                     ),
                   Container(
                     margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: ElevatedButton(onPressed: (){buttonclick('*'); },
+                    child: ElevatedButton(onPressed: (){buttonclick('X'); },
                       style: ElevatedButton.styleFrom(
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(25),
                         primary: Colors.amber
                       ),
-                        child: Text('*',
+                        child: Text('X',
                             style: TextStyle(fontFamily: 'Raleway',
                                 fontSize: 30
                             )
