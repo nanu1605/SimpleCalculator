@@ -158,13 +158,13 @@ class _HomeState extends State<Home> {
                     ),
                   Container(
                     margin: EdgeInsets.fromLTRB(5,10,5,10),
-                    child: ElevatedButton(onPressed: (){buttonclick('X'); },
+                    child: ElevatedButton(onPressed: (){buttonclick('/'); },
                       style: ElevatedButton.styleFrom(
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(25),
                         primary: Colors.amber
                       ),
-                        child: Text('X',
+                        child: Text('÷',
                             style: TextStyle(fontFamily: 'Raleway',
                                 fontSize: 30
                             )
@@ -222,13 +222,13 @@ class _HomeState extends State<Home> {
                       ),
                     Container(
                       margin: EdgeInsets.fromLTRB(5,10,5,10),
-                      child: ElevatedButton(onPressed: (){buttonclick('+'); },
+                      child: ElevatedButton(onPressed: (){buttonclick('*'); },
                         style: ElevatedButton.styleFrom(
                           shape: CircleBorder(),
                           padding: EdgeInsets.all(25),
                             primary: Colors.amber
                         ),
-                          child: Text('+',
+                          child: Text('X',
                               style: TextStyle(fontFamily: 'Raleway',
                                   fontSize: 30
                               )
@@ -351,13 +351,13 @@ class _HomeState extends State<Home> {
                       ),
                     Container(
                       margin: EdgeInsets.fromLTRB(5,10,5,10),
-                      child: ElevatedButton(onPressed: (){buttonclick('/'); },
+                      child: ElevatedButton(onPressed: (){buttonclick('+'); },
                         style: ElevatedButton.styleFrom(
                           shape: CircleBorder(),
                           padding: EdgeInsets.all(25),
                           primary: Colors.amber
                         ),
-                          child: Text('/',
+                          child: Text('+',
                               style: TextStyle(fontFamily: 'Raleway',
                                   fontSize: 30
                               )
